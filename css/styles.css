@@ -17,6 +17,8 @@ body{
     #d2dbdc 100%);
   
 }
+
+
 .container{
     display: flex;
     width: 80%;
@@ -29,21 +31,73 @@ body{
     background-color: blue;
     width: 35%;
 }
+.box-radius-icon{
+    height: 100%;
+    padding: 5px;
+    display: flex;
+    justify-content: flex-start;
+}
+.box-radius-icon img{
+    border-radius: 50%;
+    height: 100%;   
+}
+.box-radius-icon p{
+    display: flex;
+    align-items: center;
+    margin: 0 15px;
+}
+.box-link i{
+    margin: 0 5px;
+    cursor: pointer;
+    color: #d2dbdc;
+} 
+/* parte notific */
+.notific{
+    background-color: rgb(112, 227, 253);
+    display: flex;
+    
+    
+}
+.icon-notifc{
+    background-color:#fff ;
+    color: rgb(112, 227, 253);
+    border-radius: 50%;
+      margin: 10PX 10px;
+}
+
+.text-notific{
+    font-size: 12px;
+}
+.notific a{
+    color: lightslategrey;
+    margin-top: 5px;  
+}
+.text-notific{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+/* parte messaggistica */
 .block-right{
     height: 100%;
     background-color: crimson;
     width: 65%;
     
 }
-.user-box,.usere{
+.user-box{
     height: 10%;
-    background-color: brown;
+    background-color: #d2dbdc;
     border-right: 1px solid gray;
 }
-.notific{
+.usere{
     height: 10%;
-    background-color: orange; 
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+    background-color: #eee;
 }
+
 .search{
     height: 5%;
     background-color:pink;    
