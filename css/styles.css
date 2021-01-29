@@ -42,11 +42,11 @@ body{
 }
 .notific{
     height: 10%;
-    background-color: aqua; 
+    background-color: orange; 
 }
 .search{
     height: 5%;
-    background-color: black;    
+    background-color:pink;    
 }
 .box-main{
     height: 80%; 
