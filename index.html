@@ -44,8 +44,6 @@
                 <ul class="contact">
                     <li 
                     v-for="(contact, index) in contacts "
-                    @click="text(index)"
-                    v-show="contact.visible" 
                     class="list">
                         <img :src="'./images/avatar'+contact.avatar+'.jpg'" :alt="contact.name">
                         <span class="contact-name">{{contact.name}}</span>
