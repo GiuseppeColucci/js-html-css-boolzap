@@ -3,12 +3,26 @@
     padding: 0;
     box-sizing: border-box;
 }
-.container-block{
-    max-width: 1200px;
-    height: 950px;
-    margin: 0 auto;
-    background-color: aqua;
+body{
+    font-family: 'Roboto', sans-serif;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(
+    to bottom,
+    #009688 0%,
+    #009688 15%,
+    #d2dbdc 15%,
+    #d2dbdc 100%);
+  
+}
+.container{
+    display: flex;
+    width: 80%;
+    min-width: 900px;
+    height: 95%;
+    background-color: #fff;
 }
 .block-left{
     height: 100%;
@@ -21,7 +35,24 @@
     width: 65%;
     
 }
+.user-box,.usere{
+    height: 10%;
+    background-color: brown;
+    border-right: 1px solid gray;
+}
+.notific{
+    height: 10%;
+    background-color: aqua; 
+}
+.search{
+    height: 5%;
+    background-color: black;    
+}
+.box-main{
+    height: 80%; 
+    background-color: aqua;
+}
 .footer-box{
-    height: 50px;
+    height: 10%;
     background-color: coral;
 }
