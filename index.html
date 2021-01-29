@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
     <title>Document</title>
 </head>
 <body>
@@ -41,7 +41,16 @@
                 </div>
             </div>
             <div class="box-list-user">
-                lista di utenti
+                <ul class="contact">
+                    <li 
+                    v-for="(contact, index) in contacts "
+                    @click="text(index)"
+                    v-show="contact.visible" 
+                    class="list">
+                        <img :src="'./images/avatar'+contact.avatar+'.jpg'" :alt="contact.name">
+                        <span class="contact-name">{{contact.name}}</span>
+                    </li>
+                </ul>
             </div>
             
         </div>
