@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container-block{
+    max-width: 1200px;
+    height: 950px;
+    margin: 0 auto;
+    background-color: aqua;
+    display: flex;
+}
+.block-left{
+    height: 100%;
+    background-color: blue;
+    width: 35%;
+}
+.block-right{
+    height: 100%;
+    background-color: crimson;
+    width: 65%;
+    
+}
+.footer-box{
+    height: 50px;
+    background-color: coral;
+}
