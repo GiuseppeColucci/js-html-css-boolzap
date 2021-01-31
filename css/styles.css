@@ -40,14 +40,15 @@ body{
 }
 .box-radius-icon img{
     border-radius: 50%;
-    height: 100%;   
+    height: 50px;
+    width: 50px;
 }
 .box-radius-icon p{
     display: flex;
     align-items: center;
     margin: 0 15px;
 }
-.box-link i{
+.box-link i,.link i{
     margin: 0 5px;
     cursor: pointer;
     color: #d2dbdc;
@@ -61,7 +62,13 @@ body{
     background-color:#fff ;
     color: rgb(112, 227, 253);
     border-radius: 50%;
-      margin: 10PX 10px;
+    margin: 10px 10px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
 }
 
 .text-notific{
@@ -141,29 +148,44 @@ body{
 /* parte messaggistica */
 .block-right{
     height: 100%;
-    background-color: crimson;
+    /* background-color: crimson; */
     width: 65%;
     
 }
-.user-box{
-    height: 10%;
-    background-color: #d2dbdc;
-    border-right: 1px solid gray;
-}
-.usere{
-    height: 10%;
+
+.user{
+    
     display: flex;
     justify-content:space-between ;
     align-items: center;
     background-color: #eee;
+    border-right: 1px solid gray;
 }
-
 
 .box-main{
     height: 80%; 
-    background-color: aqua;
+    background-image: url(../images/mine.jpg);
 }
-.footer-box{
+/* .footer-box{
     height: 10%;
     background-color: coral;
+} */
+/* parte dell footer */
+.footer-box{
+    display: flex;
+    justify-content:space-around ;
+    background-color: #fff7ef;
+    padding: 10px;
+}
+.footer-box input{
+    width: 80%;
+    height: 30px;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+.footer-box i{
+    font-size: 20px;
+    color: #898989;
+    cursor: pointer;
+   
 }
