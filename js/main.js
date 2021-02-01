@@ -1,7 +1,7 @@
 new Vue({
     el:'#app',
     data:{
-       
+        contacts2:0,
         contacts: [
             {
                 name: 'Michele',
@@ -91,7 +91,10 @@ new Vue({
         
     },
     methods:{
-        
+        text(index){
+            this.contacts2 = index;
+            console.log(this.contacts2)
+          },
     }
 
 

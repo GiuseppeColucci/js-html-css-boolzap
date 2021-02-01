@@ -166,10 +166,40 @@ body{
     height: 80%; 
     background-image: url(../images/mine.jpg);
 }
-/* .footer-box{
-    height: 10%;
-    background-color: coral;
-} */
+/* parte messaggi */
+.messagge-text{
+    display: flex;
+    flex-direction: column;
+}
+.sent{
+    background-color: #fff;
+    margin-right: 50px;
+    align-self: flex-start;
+    
+}
+.received{
+    background-color: rgb(157, 225, 157);
+    margin-left: 50px;
+    align-self: flex-end;
+    
+}
+.message{
+    margin-bottom: 5px;
+    font-size: 12px;
+    
+}
+.data-message p{
+    float: right;
+    color: grey;
+    font-size: 10px; 
+}
+.sent,
+.received{
+    width: 35%;
+    padding: 10px 10px;
+    margin: 10px 15px;
+    border-radius: 10px;
+}
 /* parte dell footer */
 .footer-box{
     display: flex;

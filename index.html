@@ -44,10 +44,19 @@
                 <ul class="contact">
                     <li 
                     v-for="(contact, index) in contacts "
+                    :class="contacts2 == index ? 'list2' : ''"
+                    @click="text(index)"
+                    v-show="contact.visible" 
                     class="list">
                         <img :src="'./images/avatar'+contact.avatar+'.jpg'" :alt="contact.name">
                         <span class="contact-name">{{contact.name}}</span>
                     </li>
+                    <!-- <li 
+                    v-for="(contact, index) in contacts "
+                    class="list">
+                        <img :src="'./images/avatar'+contact.avatar+'.jpg'" :alt="contact.name">
+                        <span class="contact-name">{{contact.name}}</span>
+                    </li> -->
                 </ul>
             </div>
             
@@ -59,7 +68,7 @@
                 
                 <div class="box-radius-icon">
                     <img src="images/avatar_io.jpg" alt="">
-                    <p>nome utente</p>
+                    <p>{{contacts[contacts2].name}}</p>
                 </div>
                 <div class="link">
                     <i class="fas fa-search"></i>
@@ -69,11 +78,10 @@
             </div>
             <div class="box-main">
                 <div class="messagge-text"
-                v-for="(element, index) in contacts ">
-                    <div class="sms" 
-                        :class="element.status== 'sent' ? 'recevid': 'sent'">
+                v-for="(element, index) in contacts[contacts2].messages">
+                    <div :class="element.status== 'sent' ? 'received': 'sent'">
                         <div class="message">
-                            <p>{{element.message}}</p>  
+                            <p>{{element.text}}</p>  
                         </div>
                     </div>                               
                 </div>  
