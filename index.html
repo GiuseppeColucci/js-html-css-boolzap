@@ -68,7 +68,15 @@
                 </div>   
             </div>
             <div class="box-main">
-                testo messaggi
+                <div class="messagge-text"
+                v-for="(element, index) in contacts ">
+                    <div class="sms" 
+                        :class="element.status== 'sent' ? 'recevid': 'sent'">
+                        <div class="message">
+                            <p>{{element.message}}</p>  
+                        </div>
+                    </div>                               
+                </div>  
             </div>
             <div class="footer-box">
                 <i class="far fa-smile-beam"></i>
@@ -77,7 +85,7 @@
                 placeholder="Scrivi messaggio">
                 <i class="fas fa-microphone"></i></div>
             </div>
-            <!-- nome utente, boxmessag, footer -->
+         
         </div>
 
 
