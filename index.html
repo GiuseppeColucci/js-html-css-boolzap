@@ -51,12 +51,6 @@
                         <img :src="'./images/avatar'+contact.avatar+'.jpg'" :alt="contact.name">
                         <span class="contact-name">{{contact.name}}</span>
                     </li>
-                    <!-- <li 
-                    v-for="(contact, index) in contacts "
-                    class="list">
-                        <img :src="'./images/avatar'+contact.avatar+'.jpg'" :alt="contact.name">
-                        <span class="contact-name">{{contact.name}}</span>
-                    </li> -->
                 </ul>
             </div>
             
@@ -67,7 +61,7 @@
             <div class="user">
                 
                 <div class="box-radius-icon">
-                    <img src="images/avatar_io.jpg" alt="">
+                    <img :src="'./images/avatar'+contacts[contacts2].avatar+'.jpg'"alt="">
                     <p>{{contacts[contacts2].name}}</p>
                 </div>
                 <div class="link">
@@ -82,7 +76,11 @@
                     <div :class="element.status== 'sent' ? 'received': 'sent'">
                         <div class="message">
                             <p>{{element.text}}</p>  
+                            <p>{{element.messageSMS}}</p>  
                         </div>
+                        <div class="data-message">
+                            <p>{{element.date}}</p>                        
+                        </div>  
                     </div>                               
                 </div>  
             </div>
@@ -90,6 +88,8 @@
                 <i class="far fa-smile-beam"></i>
                 <input 
                 type="text" 
+                v-on:keyup.enter="NewTexInput(contacts2)"
+                v-model="nexMessage"
                 placeholder="Scrivi messaggio">
                 <i class="fas fa-microphone"></i></div>
             </div>

@@ -2,6 +2,7 @@ new Vue({
     el:'#app',
     data:{
         contacts2:0,
+        nexMessage:'',
         contacts: [
             {
                 name: 'Michele',
@@ -93,8 +94,32 @@ new Vue({
     methods:{
         text(index){
             this.contacts2 = index;
-            console.log(this.contacts2)
+            
           },
+
+          NewTexInput(index){
+            if(this.nexMessage.trim() !== ''){
+                this.contacts[index]. messages.push({
+                    messageSMS: this.nexMessage,
+                   
+                    status: 'sent' 
+                });
+                setTimeout(() => {
+                    this.animus(index)
+                }, 1000);
+
+                this.nexMessage= '';
+            }
+          },
+
+          animus(index){
+            this.contacts[index].messages.push({
+                messageSMS: 'ok',
+                
+                status: 'received'
+                });
+            },
+          
     }
 
 
