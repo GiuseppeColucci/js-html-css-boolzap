@@ -1,8 +1,10 @@
 new Vue({
     el:'#app',
     data:{
+        //chiavi /variabili-utility
         contacts2:0,
         nexMessage:'',
+        SearchUserName:'',
         contacts: [
             {
                 name: 'Michele',
@@ -92,35 +94,46 @@ new Vue({
         
     },
     methods:{
+        //parte click
         text(index){
             this.contacts2 = index;
             
           },
-
+          //parte messaggi
           NewTexInput(index){
             if(this.nexMessage.trim() !== ''){
                 this.contacts[index]. messages.push({
-                    messageSMS: this.nexMessage,
-                   
+                    messageSMS: this.nexMessage,   
                     status: 'sent' 
                 });
                 setTimeout(() => {
                     this.animus(index)
                 }, 1000);
-
+                // messaggio di ritorno vuoto
                 this.nexMessage= '';
             }
           },
-
+          //risposta automatica
           animus(index){
             this.contacts[index].messages.push({
-                messageSMS: 'ok',
-                
+                messageSMS: 'ok',                
                 status: 'received'
                 });
             },
-          
-    }
+          //parte di ricerca
+            searchUtente(){
+                this.contacts.forEach((name) => {
+                    if (name.name.toLowerCase().includes(this.SearchUserName.toLowerCase())) {
+                        name.visible = true;
+                    }
+                    else {
+                        name.visible = false;
+                    }
+                 });
+            }
+        },
+
+    
 
 
 

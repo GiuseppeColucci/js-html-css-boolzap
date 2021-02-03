@@ -10,19 +10,21 @@
 </head>
 <body>
     <div  id="app"class="container">
-
         <div class="block-left">
+            <!-- parte utente -->
             <div class="user">
                 <div class="box-radius-icon">
                     <img src="images/avatar_io.jpg" alt="">
                     <p>nome utente</p>
                 </div>
+                <!-- parte link -->
                 <div class="box-link">
                     <i class="fas fa-circle-notch"></i>
                     <i class="fas fa-comment-alt"></i>
                     <i class="fas fa-ellipsis-v"></i>
                 </div>
             </div>
+            <!-- parte notifica -->
             <div class="notific">
                 <div class="icon-notifc">
                     <i class="fas fa-bell-slash"></i>
@@ -32,14 +34,19 @@
                     <a href="">Attiva notifiche desktop</a>
                 </div>
             </div>
+            <!-- parte ricerca -->
             <div class="search">
                 <div class="box-search">
-                 <input type="text" placeholder="inserisci">
+                 <input type="text"
+                 v-model='SearchUserName'
+                @keyup='searchUtente'
+                 placeholder="inserisci">
                     <div class="mini-box">
                         <i class="fas fa-search"></i>
                     </div>                   
                 </div>
             </div>
+            <!-- parte lista utenti -->
             <div class="box-list-user">
                 <ul class="contact">
                     <li 
@@ -52,24 +59,23 @@
                         <span class="contact-name">{{contact.name}}</span>
                     </li>
                 </ul>
-            </div>
-            
+            </div>           
         </div>
-
-
         <div class="block-right">
             <div class="user">
-                
+                <!-- utente selezionato -->                
                 <div class="box-radius-icon">
                     <img :src="'./images/avatar'+contacts[contacts2].avatar+'.jpg'"alt="">
                     <p>{{contacts[contacts2].name}}</p>
                 </div>
+                <!-- parte link -->
                 <div class="link">
                     <i class="fas fa-search"></i>
                     <i class="fas fa-paperclip"></i>
                     <i class="fas fa-ellipsis-v"></i>
                 </div>   
             </div>
+            <!-- partemessaggi -->
             <div class="box-main">
                 <div class="messagge-text"
                 v-for="(element, index) in contacts[contacts2].messages">
@@ -84,6 +90,7 @@
                     </div>                               
                 </div>  
             </div>
+            <!-- parte inpute messaggi -->
             <div class="footer-box">
                 <i class="far fa-smile-beam"></i>
                 <input 

@@ -17,13 +17,11 @@ body{
     #d2dbdc 100%);
   
 }
-
-
 .container{
     display: flex;
     width: 80%;
     min-width: 900px;
-    height: 95%;
+    height: 550px;
     background-color: #fff;
 }
 /* parte utente */
@@ -70,10 +68,6 @@ body{
     align-items: center;
     font-size: 30px;
 }
-
-.text-notific{
-    font-size: 12px;
-}
 .notific a{
     color: lightslategrey;
     margin-top: 5px;  
@@ -82,6 +76,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-size: 12px;
 }
 /* parte search */
 .box-search{
@@ -94,12 +89,7 @@ body{
     margin: auto;
     
 }
-.text-notific{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 
-}
 .search{
     background-color: #f9f9f9;
     padding: 10px;
@@ -125,8 +115,7 @@ body{
     height: 50px;
     border-radius: 50px; 
 }
-.list{
-    
+.list{ 
     border-bottom: 1px solid #d9d9d9;
     list-style: none;
     cursor: pointer;
@@ -138,9 +127,7 @@ body{
 .list:hover{
     background-color: #f2f2f2;
 }
-/* .list2{
-    background-color: #f2f2f2;
-} */
+
 
 .contact-name{
     margin: 0 10px;
@@ -148,13 +135,10 @@ body{
 /* parte messaggistica */
 .block-right{
     height: 100%;
-    /* background-color: crimson; */
-    width: 65%;
-    
+    width: 65%;   
 }
 
-.user{
-    
+.user{   
     display: flex;
     justify-content:space-between ;
     align-items: center;
@@ -165,6 +149,7 @@ body{
 .box-main{
     height: 80%; 
     background-image: url(../images/mine.jpg);
+    overflow-y: auto;
 }
 /* parte messaggi */
 .messagge-text{
@@ -180,8 +165,7 @@ body{
 .received{
     background-color: rgb(157, 225, 157);
     margin-left: 50px;
-    align-self: flex-end;
-    
+    align-self: flex-end;   
 }
 .message{
     margin-bottom: 5px;
